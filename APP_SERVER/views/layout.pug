@@ -1,0 +1,66 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(href="/stylesheets/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous")
+   
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='styleshee/bootstrap.icons.css')
+  body
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.text-white.align-items-center
+      .container-fluid.nav-cont
+        a.navbar-brand(href="/") BOOKIN
+        button.navbar-toggler(
+          type="button",
+          data-bs-toggle="collapse",
+          data-bs-target="#navbarNav",
+          aria-controls="navbarNav",
+          aria-expanded="false",
+          aria-label="Toggle navigation"
+        )
+          span.navbar-toggler-icon
+        #navbarNav.collapse.navbar-collapse
+          ul.navbar-nav.ms-md-auto.gap-2
+            li.nav-item.rounded
+              a.nav-link.active(aria-current="page", href="/") Home
+            li.nav-item.rounded
+              a.nav-link(href="/about/") About Us
+            li.nav-item.rounded
+              a.nav-link(href="/list/") Shop
+
+
+    .container.main-content
+      block content
+
+    .footer-dark
+      footer
+        .container
+          .row
+            .col-sm-6.col-md-3.item
+              h3 Quick Links
+              ul
+                li
+                  a(href='#') Home
+                li
+                  a(href='#') About
+                li
+                  a(href='#') Shop
+            .col-md-6.item.text
+              h3 BOOKIN
+              p Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.
+            .col.item.social
+              a(href='#')
+                i.bi.bi-facebook
+              a(href='#')
+                i.bi.bi-twitter
+              a(href='#')
+                i.bi.bi-instagram
+          p.copyright Company Name © 2018
+
+    script(src='/javascripts/jquery-1.11.1.min.js')
+     script(src="/javascripts/bootstrap.bundle.min.js" crossorigin="anonymous")
+    script(src='/javascripts/bootstrap.min.js')
+
+//- author - Zhoha Damani
+//- Student Id- 8730121

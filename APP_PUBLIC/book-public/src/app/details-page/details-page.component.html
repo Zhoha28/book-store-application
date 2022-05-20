@@ -1,0 +1,13 @@
+<app-header></app-header>
+
+<p>{{newBook.name}}</p> 
+<p>{{newBook.price}}</p>
+<p>{{newBook.author}}</p> 
+<p>{{newBook.genre}}</p>
+
+<button class="btn btn-success text-white"><a routerLink="/books/update/{{newBook._id}}">update</a></button>
+<button class="btn btn-danger text-white"><a routerLink="/books/delete/{{newBook._id}}">delete</a></button>
+
+
+
+<app-footer></app-footer>

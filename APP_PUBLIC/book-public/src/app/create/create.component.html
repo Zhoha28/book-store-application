@@ -1,0 +1,49 @@
+<app-header></app-header>
+
+<form (ngSubmit)="createNewBook(newBook)" class="card p-5 m-2">
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="name">Name</label>
+      <input
+        class="form-control"
+        [(ngModel)]="newBook.name"
+        id="name"
+        name="name"
+        required="required"
+      />
+    </div>
+    <div class="form-group col-md-4">
+      <label for="price">price</label>
+      <input
+      class="form-control"
+        [(ngModel)]="newBook.price"
+        id="price"
+        name="price"
+        required="required"
+      />
+    </div>
+  </div>
+  <div class="form-group">
+  <label for="author">author</label>
+  <input
+  class="form-control"
+    [(ngModel)]="newBook.author"
+    id="author"
+    name="author"
+    required="required"
+  />
+</div>
+<div class="form-group">
+  <label for="genre">genre</label>
+  <input
+  class="form-control"
+    [(ngModel)]="newBook.genre"
+    id="genre"
+    name="genre"
+    required="required"
+  />
+</div>
+  <button class="btn btn-primary" type="submit">Create</button>
+</form>
+
+<app-footer></app-footer>

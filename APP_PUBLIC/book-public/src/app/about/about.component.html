@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<section class="about-section">
+    <div class="container">
+      <div class="row" *ngFor="let item of aboutInfo">
+        <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+          <div class="inner-column">
+            <div class="sec-title"><span class="title">About {{item.name}}</span>
+              <h2>We want to help you find the stories you love!</h2>
+            </div>
+            <div class="text">{{item.description}}
+              <ul class="list-style-one pt-3" *ngFor="let feature of listFeatures">
+                <li>{{feature}}</li>
+              </ul>
+              <div class="btn-box"><a class="theme-btn btn-style-one" href="#">Contact Us</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="image-column col-lg-6 col-md-12 col-sm-12">
+          <div class="inner-column wow fadeInLeft">
+            <figure class="image-1"><a class="lightbox-image" href="#" data-fancybox="images"></a><img src="https://i.postimg.cc/FztRqKzr/pexels-this-is-zun-1329550.jpg" alt=""/></figure>
+            <figure class="image-2"><a class="lightbox-image" href="#" data-fancybox="images"></a><img src="https://i.ibb.co/JvN0NVB/image-2-about.jpg" alt=""/></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<app-footer></app-footer>
+

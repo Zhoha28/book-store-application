@@ -1,0 +1,36 @@
+extends layout
+
+block content
+
+    section.about-section
+        .container
+            .row
+                each item in aboutInfo
+                    .content-column.col-lg-6.col-md-12.col-sm-12.order-2
+                        .inner-column
+                            .sec-title
+                                span.title About #{item.name}
+                                h2   We want to help you find the stories you love!
+
+                            .text #{item.description}
+                          
+                                ul.list-style-one.pt-3
+                                  each feature in listFeatures
+                                    li #{feature}
+
+
+                                .btn-box
+                                    a.theme-btn.btn-style-one(href='#') Contact Us
+
+                    .image-column.col-lg-6.col-md-12.col-sm-12
+                        .inner-column.wow.fadeInLeft
+                            figure.image-1
+                                a.lightbox-image(href='#' data-fancybox='images')
+                                img(src='https://i.postimg.cc/FztRqKzr/pexels-this-is-zun-1329550.jpg' alt='')
+                            figure.image-2
+                                a.lightbox-image(href='#' data-fancybox='images')
+                                img(src='https://i.ibb.co/JvN0NVB/image-2-about.jpg' alt='')
+
+
+    //-   each item in aboutInfo
+    //-       h4 #{item.name} : #{item.year}

@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  br
+  br
+  br
+
+  .container-fluid
+    h3 This is the Details about book:
+    br 
+    p= "Name = " +currentBook.name
+    p= "Genre ="  +currentBook.genre
+    p= "Author = " +currentBook.author
+    p= "Description ="  +currentBook.description
+    p= "Price = $ "  +currentBook.price
+
+    a.btn.btn-success(href=`/delete/${currentBook._id}`) Delete 
+    br
+    br
+    a.btn.btn-success(href=`/update/${currentBook._id}`) Update 
+
+     
+
+    

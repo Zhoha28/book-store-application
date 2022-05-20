@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  br
+  h1= title
+  br
+  p Get in touch with us anytime using the form below. Our support will contact you as soon as possible.
+  br
+  br
+  .row
+    .col-xs-12.col-md-6
+      form.form-horizontal(action="/", method="get", role="form")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="name") Name 
+          .col-xs-12.col-sm-10
+            input#name.form-control(name="name")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="email") Email 
+          .col-xs-12.col-sm-10
+            input#name.form-control(name="email")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="phone") Phone 
+          .col-xs-12.col-sm-10
+            input#name.form-control(name="phone")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="subject") Subject
+          .col-xs-12.col-sm-2
+            select#rating.form-control.input-sm(name="subject")
+              option Support
+              option Complaints
+              option Order
+              option Service
+              option Feedback
+        .form-group
+          label.col-sm-2.control-label(for="message") Message
+          .col-sm-10
+            textarea#review.form-control(name="message", rows="5")
+        button.btn.btn-default.pull-right Submit
+    .col-xs-12.col-md-4

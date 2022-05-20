@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+  .product-cards
+    each book in books
+        .product-card
+        
+            .badge Hot
+            .product-tumb
+                img(src=book.image , alt)
+            .product-details
+                span.product-catagory #{book.author}
+                h4
+                    a(href=`/books/${book._id}`) #{book.name}
+                p #{book.desription}
+                product-bottom-details
+                    .product-price $ #{book.price}
+                    .product-link
+                        a.btn.btn-dark.mt-2(href=`/books/${book._id}`) View Now
+  a(href='/new')
+        button.btn.btn-success Create New Book

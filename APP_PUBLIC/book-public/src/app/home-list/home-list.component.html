@@ -1,0 +1,33 @@
+<!-- 
+<ul> 
+  <li *ngFor="let book of books;" > 
+    <a routerLink="/books/{{book._id}}">
+      {{book.name}}
+    </a> 
+  </li> 
+
+
+  
+</ul> -->
+
+<app-header></app-header>
+
+<div class="product-cards">
+  <div class="product-card"  *ngFor="let book of books;">
+    <div class="badge">Hot</div>
+    <div class="product-tumb">
+      <img src="{{book.image}}">
+      <!-- {{book.image}} -->
+    </div>
+    <div class="product-details"><span class="product-catagory">{{book.author}}</span>
+      <h4><a href="/books/1">{{book.name}}</a></h4>
+      <p>description</p>
+      
+        <div class="product-price">$ {{book.price}}</div>
+        <div class="product-link"><a class="btn btn-dark mt-2" routerLink="/books/{{book._id}}">View Now</a></div>
+      
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

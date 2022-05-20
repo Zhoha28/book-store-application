@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  .container-fluid
+    br
+    br
+    br
+    
+    h2 Update #{currentBook.name}
+   
+    hr 
+    br
+    .row
+        .col-md-4
+            form(method='post' action='')
+                .form-group
+                    label Book Name:
+                    input.form-control(type='text' name='name'  placeholder='Enter Book Name' value=`${currentBook.name}` required)
+                .form-group
+                    label Model Name:
+                    input.form-control(type='text' name='author'  placeholder='Enter author Name' value=`${currentBook.author}` required)
+                .form-group
+                    label Price :
+                    input.form-control(type='text' name='price'  placeholder='Enter Price' value=`${currentBook.price}` required)
+                .form-group
+                    label Rating :
+                    input.form-control(type='text' name='genre'  placeholder='Enter genre' value=`${currentBook.genre}` required)
+               
+                br
+                button.btn.btn-success(type='submit') Submit
+
